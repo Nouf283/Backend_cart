@@ -24,12 +24,12 @@ jobs:
       # 3️⃣ Restore dependencies
       - name: Restore dependencies
         run: dotnet restore
-        working-directory: ShoppingCartAPI
+        working-directory: ShoppingCartAPI/ShoppingCart
 
       # 4️⃣ Build and publish
       - name: Build and publish
         run: dotnet publish -c Release -o out
-        working-directory: ShoppingCartAPI
+        working-directory: ShoppingCartAPI/ShoppingCart
 
       # 5️⃣ Login to Docker Hub
       - name: Docker login
@@ -41,7 +41,7 @@ jobs:
       # 6️⃣ Build Docker image
       - name: Build Docker image
         run: docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/dotnet-backend:latest .
-        working-directory: ShoppingCartAPI
+        working-directory: ShoppingCartAPI/ShoppingCart
 
       # 7️⃣ Push Docker image to Docker Hub
       - name: Push Docker image
