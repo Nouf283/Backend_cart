@@ -1,0 +1,77 @@
+name: Build & Deploy .NET Backend Docker
+
+# Trigger the workflow when code is pushed to main
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-push:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1️⃣ Checkout code
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      # 2️⃣ Setup .NET SDK
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: '8.0.x'
+
+      # 3️⃣ Restore dependencies
+      - name: Restore dependencies
+        run: dotnet restore
+
+      # 4️⃣ Build and publish
+      - name: Build and publish
+        run: dotnet publish -c Release -o out
+
+      # 5️⃣ Login to Docker Hub
+      - name: Docker login
+        uses: docker/login-action@v2
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_PASSWORD }}
+
+      # 6️⃣ Build Docker image
+      - name: Build Docker image
+        run: docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/dotnet-backend:latest .
+
+      # 7️⃣ Push Docker image to Docker Hub
+      - name: Push Docker image
+        run: docker push ${{ secrets.DOCKERHUB_USERNAME }}/dotnet-backend:latest
+
+  deploy-to-ec2:
+    runs-on: ubuntu-latest
+    needs: build-and-push
+
+    steps:
+      - name: SSH to EC2 via Bastion
+        uses: appleboy/ssh-action@v0.1.9
+        with:
+          host: ${{ secrets.EC2_BASTION_HOST }} # Public Bastion IP
+          username: ${{ secrets.EC2_BASTION_USER }}
+          key: ${{ secrets.EC2_SSH_KEY }}
+          port: 22
+          script: |
+            # SSH into private EC2
+            ssh -o StrictHostKeyChecking=no -i /home/ubuntu/.ssh/private-ec2-key.pem ubuntu@PRIVATE_EC2_IP << 'EOF'
+              # Pull latest Docker image
+              docker pull ${{ secrets.DOCKERHUB_USERNAME }}/dotnet-backend:latest
+
+              # Stop old container if exists
+              docker stop dotnet-backend || true
+              docker rm dotnet-backend || true
+
+              # Run new container with RDS environment variables
+              docker run -d --name dotnet-backend \
+                -e DB_HOST=${{ secrets.DB_HOST }} \
+                -e DB_NAME=${{ secrets.DB_NAME }} \
+                -e DB_USER=${{ secrets.DB_USER }} \
+                -e DB_PASSWORD=${{ secrets.DB_PASSWORD }} \
+                -p 5000:5000 \
+                ${{ secrets.DOCKERHUB_USERNAME }}/dotnet-backend:latest
+            EOF
