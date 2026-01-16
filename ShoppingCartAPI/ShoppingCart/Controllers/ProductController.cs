@@ -46,7 +46,7 @@ namespace ShoppingCart.Controllers
             if (id != product.Id)
                 return BadRequest("Product ID mismatch");
 
-            // Check if product exists
+           
             var existing = await _repository.GetProductByIdAsync(id);
             if (existing == null)
                 return NotFound("Product not found");

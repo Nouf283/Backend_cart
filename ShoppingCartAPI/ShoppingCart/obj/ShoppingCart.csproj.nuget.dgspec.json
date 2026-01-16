@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Projects\\backend\\ShoppingCartAPI\\ShoppingCart\\ShoppingCart.csproj": {}
+    "C:\\Projects\\Backend_devops\\ShoppingCartAPI\\ShoppingCart\\ShoppingCart.csproj": {}
   },
   "projects": {
-    "C:\\Projects\\backend\\ShoppingCartAPI\\ShoppingCart\\ShoppingCart.csproj": {
+    "C:\\Projects\\Backend_devops\\ShoppingCartAPI\\ShoppingCart\\ShoppingCart.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Projects\\backend\\ShoppingCartAPI\\ShoppingCart\\ShoppingCart.csproj",
+        "projectUniqueName": "C:\\Projects\\Backend_devops\\ShoppingCartAPI\\ShoppingCart\\ShoppingCart.csproj",
         "projectName": "ShoppingCart",
-        "projectPath": "C:\\Projects\\backend\\ShoppingCartAPI\\ShoppingCart\\ShoppingCart.csproj",
+        "projectPath": "C:\\Projects\\Backend_devops\\ShoppingCartAPI\\ShoppingCart\\ShoppingCart.csproj",
         "packagesPath": "C:\\Users\\noufa\\.nuget\\packages\\",
-        "outputPath": "C:\\Projects\\backend\\ShoppingCartAPI\\ShoppingCart\\obj\\",
+        "outputPath": "C:\\Projects\\Backend_devops\\ShoppingCartAPI\\ShoppingCart\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
