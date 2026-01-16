@@ -24,10 +24,12 @@ jobs:
       # 3️⃣ Restore dependencies
       - name: Restore dependencies
         run: dotnet restore
+        working-directory: ShoppingCartAPI
 
       # 4️⃣ Build and publish
       - name: Build and publish
         run: dotnet publish -c Release -o out
+        working-directory: ShoppingCartAPI
 
       # 5️⃣ Login to Docker Hub
       - name: Docker login
