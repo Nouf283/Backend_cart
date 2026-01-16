@@ -61,7 +61,10 @@ jobs:
           port: 22
           script: |
             # SSH into private EC2
-            ssh -o StrictHostKeyChecking=no -i /home/ubuntu/.ssh/private-ec2-key.pem ubuntu@PRIVATE_EC2_IP << 'EOF'
+             ssh -o StrictHostKeyChecking=no \
+              -J ubuntu@${{ secrets.EC2_BASTION_HOST }} \
+               ubuntu@${{ secrets.EC2_PRIVATE_IP }} << 'EOF'
+               
               # Pull latest Docker image
               docker pull ${{ secrets.DOCKERHUB_USERNAME }}/dotnet-backend:latest
 
@@ -75,6 +78,6 @@ jobs:
                 -e DB_NAME=${{ secrets.DB_NAME }} \
                 -e DB_USER=${{ secrets.DB_USER }} \
                 -e DB_PASSWORD=${{ secrets.DB_PASSWORD }} \
-                -p 5000:5000 \
+                -p 5000:80 \
                 ${{ secrets.DOCKERHUB_USERNAME }}/dotnet-backend:latest
             EOF
