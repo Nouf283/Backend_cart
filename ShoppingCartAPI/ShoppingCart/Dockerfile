@@ -9,14 +9,11 @@ FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /src
 
 # Copy csproj and restore dependencies
-COPY ["ShoppingCartAPI/ShoppingCart/ShoppingCart.csproj", "ShoppingCart/"]
-RUN dotnet restore "ShoppingCart/ShoppingCart.csproj"
+COPY ["ShoppingCart.csproj", "./"]
+RUN dotnet restore "ShoppingCart.csproj"
 
 # Copy all source files
-COPY ShoppingCartAPI/ShoppingCart/ ShoppingCart/
-WORKDIR /src/ShoppingCart
-
-# Build and publish
+COPY . .
 RUN dotnet build "ShoppingCart.csproj" -c Release -o /app/build
 RUN dotnet publish "ShoppingCart.csproj" -c Release -o /app/publish
 
