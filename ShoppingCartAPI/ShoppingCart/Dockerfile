@@ -15,11 +15,16 @@ RUN dotnet restore "ShoppingCart/ShoppingCart.csproj"
 # Copy all source files
 COPY ShoppingCartAPI/ShoppingCart/ ShoppingCart/
 WORKDIR /src/ShoppingCart
+
+# Build and publish
 RUN dotnet build "ShoppingCart.csproj" -c Release -o /app/build
 RUN dotnet publish "ShoppingCart.csproj" -c Release -o /app/publish
 
 # Final image
 FROM base AS final
 WORKDIR /app
-COPY --from=publish /app/publish .
+
+# Copy publish output from build stage
+COPY --from=build /app/publish .
+
 ENTRYPOINT ["dotnet", "ShoppingCart.dll"]
