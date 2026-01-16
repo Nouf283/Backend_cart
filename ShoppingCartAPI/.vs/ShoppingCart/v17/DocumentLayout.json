@@ -1,0 +1,280 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Projects\\backend\\ShoppingCartAPI\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{6EDB6DBE-2ED8-4679-AB8B-D9FFAA3A2924}|ShoppingCart\\ShoppingCart.csproj|c:\\projects\\backend\\shoppingcartapi\\shoppingcart\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6EDB6DBE-2ED8-4679-AB8B-D9FFAA3A2924}|ShoppingCart\\ShoppingCart.csproj|solutionrelative:shoppingcart\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6EDB6DBE-2ED8-4679-AB8B-D9FFAA3A2924}|ShoppingCart\\ShoppingCart.csproj|c:\\projects\\backend\\shoppingcartapi\\shoppingcart\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{6EDB6DBE-2ED8-4679-AB8B-D9FFAA3A2924}|ShoppingCart\\ShoppingCart.csproj|solutionrelative:shoppingcart\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6EDB6DBE-2ED8-4679-AB8B-D9FFAA3A2924}|ShoppingCart\\ShoppingCart.csproj|c:\\projects\\backend\\shoppingcartapi\\shoppingcart\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{6EDB6DBE-2ED8-4679-AB8B-D9FFAA3A2924}|ShoppingCart\\ShoppingCart.csproj|solutionrelative:shoppingcart\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6EDB6DBE-2ED8-4679-AB8B-D9FFAA3A2924}|ShoppingCart\\ShoppingCart.csproj|c:\\projects\\backend\\shoppingcartapi\\shoppingcart\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6EDB6DBE-2ED8-4679-AB8B-D9FFAA3A2924}|ShoppingCart\\ShoppingCart.csproj|solutionrelative:shoppingcart\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6EDB6DBE-2ED8-4679-AB8B-D9FFAA3A2924}|ShoppingCart\\ShoppingCart.csproj|c:\\projects\\backend\\shoppingcartapi\\shoppingcart\\repositories\\iproductrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6EDB6DBE-2ED8-4679-AB8B-D9FFAA3A2924}|ShoppingCart\\ShoppingCart.csproj|solutionrelative:shoppingcart\\repositories\\iproductrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6EDB6DBE-2ED8-4679-AB8B-D9FFAA3A2924}|ShoppingCart\\ShoppingCart.csproj|c:\\projects\\backend\\shoppingcartapi\\shoppingcart\\implementations\\productrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6EDB6DBE-2ED8-4679-AB8B-D9FFAA3A2924}|ShoppingCart\\ShoppingCart.csproj|solutionrelative:shoppingcart\\implementations\\productrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6EDB6DBE-2ED8-4679-AB8B-D9FFAA3A2924}|ShoppingCart\\ShoppingCart.csproj|c:\\projects\\backend\\shoppingcartapi\\shoppingcart\\datamodel\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6EDB6DBE-2ED8-4679-AB8B-D9FFAA3A2924}|ShoppingCart\\ShoppingCart.csproj|solutionrelative:shoppingcart\\datamodel\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6EDB6DBE-2ED8-4679-AB8B-D9FFAA3A2924}|ShoppingCart\\ShoppingCart.csproj|c:\\projects\\backend\\shoppingcartapi\\shoppingcart\\controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6EDB6DBE-2ED8-4679-AB8B-D9FFAA3A2924}|ShoppingCart\\ShoppingCart.csproj|solutionrelative:shoppingcart\\controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6EDB6DBE-2ED8-4679-AB8B-D9FFAA3A2924}|ShoppingCart\\ShoppingCart.csproj|c:\\projects\\backend\\shoppingcartapi\\shoppingcart\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6EDB6DBE-2ED8-4679-AB8B-D9FFAA3A2924}|ShoppingCart\\ShoppingCart.csproj|solutionrelative:shoppingcart\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6EDB6DBE-2ED8-4679-AB8B-D9FFAA3A2924}|ShoppingCart\\ShoppingCart.csproj|c:\\projects\\backend\\shoppingcartapi\\shoppingcart\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6EDB6DBE-2ED8-4679-AB8B-D9FFAA3A2924}|ShoppingCart\\ShoppingCart.csproj|solutionrelative:shoppingcart\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6EDB6DBE-2ED8-4679-AB8B-D9FFAA3A2924}|ShoppingCart\\ShoppingCart.csproj|c:\\projects\\backend\\shoppingcartapi\\shoppingcart\\shoppingcart.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{6EDB6DBE-2ED8-4679-AB8B-D9FFAA3A2924}|ShoppingCart\\ShoppingCart.csproj|solutionrelative:shoppingcart\\shoppingcart.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6EDB6DBE-2ED8-4679-AB8B-D9FFAA3A2924}|ShoppingCart\\ShoppingCart.csproj|c:\\projects\\backend\\shoppingcartapi\\shoppingcart\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{6EDB6DBE-2ED8-4679-AB8B-D9FFAA3A2924}|ShoppingCart\\ShoppingCart.csproj|solutionrelative:shoppingcart\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6EDB6DBE-2ED8-4679-AB8B-D9FFAA3A2924}|ShoppingCart\\ShoppingCart.csproj|c:\\projects\\backend\\shoppingcartapi\\shoppingcart\\repositories\\icartrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6EDB6DBE-2ED8-4679-AB8B-D9FFAA3A2924}|ShoppingCart\\ShoppingCart.csproj|solutionrelative:shoppingcart\\repositories\\icartrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6EDB6DBE-2ED8-4679-AB8B-D9FFAA3A2924}|ShoppingCart\\ShoppingCart.csproj|c:\\projects\\backend\\shoppingcartapi\\shoppingcart\\datamodel\\cartitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6EDB6DBE-2ED8-4679-AB8B-D9FFAA3A2924}|ShoppingCart\\ShoppingCart.csproj|solutionrelative:shoppingcart\\datamodel\\cartitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6EDB6DBE-2ED8-4679-AB8B-D9FFAA3A2924}|ShoppingCart\\ShoppingCart.csproj|c:\\projects\\backend\\shoppingcartapi\\shoppingcart\\datamodel\\cart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6EDB6DBE-2ED8-4679-AB8B-D9FFAA3A2924}|ShoppingCart\\ShoppingCart.csproj|solutionrelative:shoppingcart\\datamodel\\cart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6EDB6DBE-2ED8-4679-AB8B-D9FFAA3A2924}|ShoppingCart\\ShoppingCart.csproj|c:\\projects\\backend\\shoppingcartapi\\shoppingcart\\shoppingcart.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
+      "RelativeMoniker": "D:0:0:{6EDB6DBE-2ED8-4679-AB8B-D9FFAA3A2924}|ShoppingCart\\ShoppingCart.csproj|solutionrelative:shoppingcart\\shoppingcart.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ProductController.cs",
+              "DocumentMoniker": "C:\\Projects\\backend\\ShoppingCartAPI\\ShoppingCart\\Controllers\\ProductController.cs",
+              "RelativeDocumentMoniker": "ShoppingCart\\Controllers\\ProductController.cs",
+              "ToolTip": "C:\\Projects\\backend\\ShoppingCartAPI\\ShoppingCart\\Controllers\\ProductController.cs",
+              "RelativeToolTip": "ShoppingCart\\Controllers\\ProductController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-15T10:03:58.565Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Dockerfile",
+              "DocumentMoniker": "C:\\Projects\\backend\\ShoppingCartAPI\\ShoppingCart\\Dockerfile",
+              "RelativeDocumentMoniker": "ShoppingCart\\Dockerfile",
+              "ToolTip": "C:\\Projects\\backend\\ShoppingCartAPI\\ShoppingCart\\Dockerfile",
+              "RelativeToolTip": "ShoppingCart\\Dockerfile",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-01-15T08:47:43.115Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ShoppingCart",
+              "DocumentMoniker": "C:\\Projects\\backend\\ShoppingCartAPI\\ShoppingCart\\ShoppingCart.csproj",
+              "RelativeDocumentMoniker": "ShoppingCart\\ShoppingCart.csproj",
+              "ToolTip": "C:\\Projects\\backend\\ShoppingCartAPI\\ShoppingCart\\ShoppingCart.csproj",
+              "RelativeToolTip": "ShoppingCart\\ShoppingCart.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-01-15T08:40:07.739Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "ICartRepository.cs",
+              "DocumentMoniker": "C:\\Projects\\backend\\ShoppingCartAPI\\ShoppingCart\\Repositories\\ICartRepository.cs",
+              "RelativeDocumentMoniker": "ShoppingCart\\Repositories\\ICartRepository.cs",
+              "ToolTip": "C:\\Projects\\backend\\ShoppingCartAPI\\ShoppingCart\\Repositories\\ICartRepository.cs",
+              "RelativeToolTip": "ShoppingCart\\Repositories\\ICartRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-17T14:06:12.169Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "CartController.cs",
+              "DocumentMoniker": "C:\\Projects\\backend\\ShoppingCartAPI\\ShoppingCart\\Controllers\\CartController.cs",
+              "RelativeDocumentMoniker": "ShoppingCart\\Controllers\\CartController.cs",
+              "ToolTip": "C:\\Projects\\backend\\ShoppingCartAPI\\ShoppingCart\\Controllers\\CartController.cs",
+              "RelativeToolTip": "ShoppingCart\\Controllers\\CartController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-17T14:05:27.28Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "CartItem.cs",
+              "DocumentMoniker": "C:\\Projects\\backend\\ShoppingCartAPI\\ShoppingCart\\DataModel\\CartItem.cs",
+              "RelativeDocumentMoniker": "ShoppingCart\\DataModel\\CartItem.cs",
+              "ToolTip": "C:\\Projects\\backend\\ShoppingCartAPI\\ShoppingCart\\DataModel\\CartItem.cs",
+              "RelativeToolTip": "ShoppingCart\\DataModel\\CartItem.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-17T13:51:25.723Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Cart.cs",
+              "DocumentMoniker": "C:\\Projects\\backend\\ShoppingCartAPI\\ShoppingCart\\DataModel\\Cart.cs",
+              "RelativeDocumentMoniker": "ShoppingCart\\DataModel\\Cart.cs",
+              "ToolTip": "C:\\Projects\\backend\\ShoppingCartAPI\\ShoppingCart\\DataModel\\Cart.cs",
+              "RelativeToolTip": "ShoppingCart\\DataModel\\Cart.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-17T13:47:17.464Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "ShoppingCart.http",
+              "DocumentMoniker": "C:\\Projects\\backend\\ShoppingCartAPI\\ShoppingCart\\ShoppingCart.http",
+              "RelativeDocumentMoniker": "ShoppingCart\\ShoppingCart.http",
+              "ToolTip": "C:\\Projects\\backend\\ShoppingCartAPI\\ShoppingCart\\ShoppingCart.http",
+              "RelativeToolTip": "ShoppingCart\\ShoppingCart.http",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
+              "WhenOpened": "2025-10-05T11:11:36.887Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "WeatherForecast.cs",
+              "DocumentMoniker": "C:\\Projects\\backend\\ShoppingCartAPI\\ShoppingCart\\WeatherForecast.cs",
+              "RelativeDocumentMoniker": "ShoppingCart\\WeatherForecast.cs",
+              "ToolTip": "C:\\Projects\\backend\\ShoppingCartAPI\\ShoppingCart\\WeatherForecast.cs",
+              "RelativeToolTip": "ShoppingCart\\WeatherForecast.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-05T09:33:03.38Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Projects\\backend\\ShoppingCartAPI\\ShoppingCart\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "ShoppingCart\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Projects\\backend\\ShoppingCartAPI\\ShoppingCart\\Properties\\launchSettings.json",
+              "RelativeToolTip": "ShoppingCart\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-10-05T07:13:32.061Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ProductRepository.cs",
+              "DocumentMoniker": "C:\\Projects\\backend\\ShoppingCartAPI\\ShoppingCart\\Implementations\\ProductRepository.cs",
+              "RelativeDocumentMoniker": "ShoppingCart\\Implementations\\ProductRepository.cs",
+              "ToolTip": "C:\\Projects\\backend\\ShoppingCartAPI\\ShoppingCart\\Implementations\\ProductRepository.cs",
+              "RelativeToolTip": "ShoppingCart\\Implementations\\ProductRepository.cs",
+              "ViewState": "AgIAACgAAAAAAAAAAAAywC8AAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-01T09:44:54.523Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IProductRepository.cs",
+              "DocumentMoniker": "C:\\Projects\\backend\\ShoppingCartAPI\\ShoppingCart\\Repositories\\IProductRepository.cs",
+              "RelativeDocumentMoniker": "ShoppingCart\\Repositories\\IProductRepository.cs",
+              "ToolTip": "C:\\Projects\\backend\\ShoppingCartAPI\\ShoppingCart\\Repositories\\IProductRepository.cs",
+              "RelativeToolTip": "ShoppingCart\\Repositories\\IProductRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAcAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-01T09:40:37.906Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Product.cs",
+              "DocumentMoniker": "C:\\Projects\\backend\\ShoppingCartAPI\\ShoppingCart\\DataModel\\Product.cs",
+              "RelativeDocumentMoniker": "ShoppingCart\\DataModel\\Product.cs",
+              "ToolTip": "C:\\Projects\\backend\\ShoppingCartAPI\\ShoppingCart\\DataModel\\Product.cs",
+              "RelativeToolTip": "ShoppingCart\\DataModel\\Product.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-01T09:39:05.683Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Projects\\backend\\ShoppingCartAPI\\ShoppingCart\\Program.cs",
+              "RelativeDocumentMoniker": "ShoppingCart\\Program.cs",
+              "ToolTip": "C:\\Projects\\backend\\ShoppingCartAPI\\ShoppingCart\\Program.cs",
+              "RelativeToolTip": "ShoppingCart\\Program.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAA+wDAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-01T09:32:50.733Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Projects\\backend\\ShoppingCartAPI\\ShoppingCart\\appsettings.json",
+              "RelativeDocumentMoniker": "ShoppingCart\\appsettings.json",
+              "ToolTip": "C:\\Projects\\backend\\ShoppingCartAPI\\ShoppingCart\\appsettings.json",
+              "RelativeToolTip": "ShoppingCart\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-10-01T09:31:11.122Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "WeatherForecastController.cs",
+              "DocumentMoniker": "C:\\Projects\\backend\\ShoppingCartAPI\\ShoppingCart\\Controllers\\WeatherForecastController.cs",
+              "RelativeDocumentMoniker": "ShoppingCart\\Controllers\\WeatherForecastController.cs",
+              "ToolTip": "C:\\Projects\\backend\\ShoppingCartAPI\\ShoppingCart\\Controllers\\WeatherForecastController.cs",
+              "RelativeToolTip": "ShoppingCart\\Controllers\\WeatherForecastController.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABoAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-01T09:17:40.147Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
