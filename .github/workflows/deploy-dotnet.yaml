@@ -82,7 +82,7 @@
 
 name: Build & Deploy .NET Backend (No Docker)
 
-# Trigger the workflow when code is pushed to master
+# Trigger the workflow when code is
 on:
   push:
     branches:
