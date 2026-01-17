@@ -134,9 +134,9 @@ jobs:
           host: ${{ secrets.EC2_PRIVATE_IP }}
           username: ubuntu
           key: ${{ secrets.EC2_SSH_KEY }}
-          source: 'ShoppingCartAPI/ShoppingCart/bin/Release/net8.0/publish/*'
+          source: 'ShoppingCartAPI/ShoppingCart/publish/*'
           target: '/var/www/backend'
-          strip_components: 1
+          strip_components: 0
 
           proxy_host: ${{ secrets.EC2_BASTION_HOST }}
           proxy_username: ubuntu
