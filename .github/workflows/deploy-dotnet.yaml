@@ -1,6 +1,6 @@
 name: Build & Deploy .NET Backend Docker
 
-# Trigger the workflow when code is pushed to main
+# Trigger the workflow when code is pushed to main final
 on:
   push:
     branches:
