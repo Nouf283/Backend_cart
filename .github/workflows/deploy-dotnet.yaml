@@ -165,7 +165,7 @@ jobs:
           username: ubuntu
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
-            cd /home/ubuntu/Backend_cart/ShoppingCartAPI
+            cd /home/ubuntu/Backend_cart
             git pull
             export KUBECONFIG=/home/ubuntu/kubeconfig
             kubectl apply -f k8s/backend-deployment.yaml
