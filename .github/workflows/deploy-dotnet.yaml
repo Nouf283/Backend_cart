@@ -157,3 +157,16 @@ jobs:
           script: |
             sudo chown -R ubuntu:ubuntu /var/www/backend
             sudo systemctl restart dotnet-backend
+      # 8️⃣ Deploy backend to Kubernetes
+      - name: Deploy backend to Kubernetes
+        uses: appleboy/ssh-action@v0.1.9
+        with:
+          host: ${{ secrets.EC2_BASTION_HOST }}
+          username: ubuntu
+          key: ${{ secrets.EC2_SSH_KEY }}
+          script: |
+            cd /home/ubuntu/Backend_cart/ShoppingCartAPI
+            git pull
+            export KUBECONFIG=/home/ubuntu/kubeconfig
+            kubectl apply -f k8s/backend-deployment.yaml
+            kubectl apply -f k8s/backend-service.yaml
