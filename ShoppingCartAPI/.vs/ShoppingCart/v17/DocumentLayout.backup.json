@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "C:\\Projects\\Backend_devops\\ShoppingCartAPI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6EDB6DBE-2ED8-4679-AB8B-D9FFAA3A2924}|ShoppingCart\\ShoppingCart.csproj|c:\\projects\\backend_devops\\shoppingcartapi\\shoppingcart\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6EDB6DBE-2ED8-4679-AB8B-D9FFAA3A2924}|ShoppingCart\\ShoppingCart.csproj|solutionrelative:shoppingcart\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6EDB6DBE-2ED8-4679-AB8B-D9FFAA3A2924}|ShoppingCart\\ShoppingCart.csproj|c:\\projects\\backend_devops\\shoppingcartapi\\shoppingcart\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6EDB6DBE-2ED8-4679-AB8B-D9FFAA3A2924}|ShoppingCart\\ShoppingCart.csproj|solutionrelative:shoppingcart\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6EDB6DBE-2ED8-4679-AB8B-D9FFAA3A2924}|ShoppingCart\\ShoppingCart.csproj|c:\\projects\\backend_devops\\shoppingcartapi\\shoppingcart\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -31,10 +31,6 @@
       "RelativeMoniker": "D:0:0:{6EDB6DBE-2ED8-4679-AB8B-D9FFAA3A2924}|ShoppingCart\\ShoppingCart.csproj|solutionrelative:shoppingcart\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6EDB6DBE-2ED8-4679-AB8B-D9FFAA3A2924}|ShoppingCart\\ShoppingCart.csproj|c:\\projects\\backend_devops\\shoppingcartapi\\shoppingcart\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6EDB6DBE-2ED8-4679-AB8B-D9FFAA3A2924}|ShoppingCart\\ShoppingCart.csproj|solutionrelative:shoppingcart\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{6EDB6DBE-2ED8-4679-AB8B-D9FFAA3A2924}|ShoppingCart\\ShoppingCart.csproj|c:\\projects\\backend_devops\\shoppingcartapi\\shoppingcart\\repositories\\iproductrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6EDB6DBE-2ED8-4679-AB8B-D9FFAA3A2924}|ShoppingCart\\ShoppingCart.csproj|solutionrelative:shoppingcart\\repositories\\iproductrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -49,6 +45,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{6EDB6DBE-2ED8-4679-AB8B-D9FFAA3A2924}|ShoppingCart\\ShoppingCart.csproj|c:\\projects\\backend_devops\\shoppingcartapi\\shoppingcart\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6EDB6DBE-2ED8-4679-AB8B-D9FFAA3A2924}|ShoppingCart\\ShoppingCart.csproj|solutionrelative:shoppingcart\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6EDB6DBE-2ED8-4679-AB8B-D9FFAA3A2924}|ShoppingCart\\ShoppingCart.csproj|c:\\projects\\backend_devops\\shoppingcartapi\\shoppingcart\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6EDB6DBE-2ED8-4679-AB8B-D9FFAA3A2924}|ShoppingCart\\ShoppingCart.csproj|solutionrelative:shoppingcart\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6EDB6DBE-2ED8-4679-AB8B-D9FFAA3A2924}|ShoppingCart\\ShoppingCart.csproj|c:\\projects\\backend_devops\\shoppingcartapi\\shoppingcart\\repositories\\icartrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -74,7 +74,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 16,
+          "SelectedChildIndex": 14,
           "Children": [
             {
               "$type": "Bookmark",
@@ -88,10 +88,9 @@
               "RelativeDocumentMoniker": "ShoppingCart\\Controllers\\ProductController.cs",
               "ToolTip": "C:\\Projects\\Backend_devops\\ShoppingCartAPI\\ShoppingCart\\Controllers\\ProductController.cs",
               "RelativeToolTip": "ShoppingCart\\Controllers\\ProductController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAPAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAIBGwCsAAABPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-15T10:03:58.565Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-15T10:03:58.565Z"
             },
             {
               "$type": "Document",
@@ -136,10 +135,9 @@
               "RelativeDocumentMoniker": "ShoppingCart\\Controllers\\CartController.cs",
               "ToolTip": "C:\\Projects\\Backend_devops\\ShoppingCartAPI\\ShoppingCart\\Controllers\\CartController.cs",
               "RelativeToolTip": "ShoppingCart\\Controllers\\CartController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwA8AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-17T14:05:27.28Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-17T14:05:27.28Z"
             },
             {
               "$type": "Document",
@@ -179,7 +177,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 10,
               "Title": "WeatherForecast.cs",
               "DocumentMoniker": "C:\\Projects\\Backend_devops\\ShoppingCartAPI\\ShoppingCart\\WeatherForecast.cs",
               "RelativeDocumentMoniker": "ShoppingCart\\WeatherForecast.cs",
@@ -203,7 +201,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 8,
               "Title": "ProductRepository.cs",
               "DocumentMoniker": "C:\\Projects\\Backend_devops\\ShoppingCartAPI\\ShoppingCart\\Implementations\\ProductRepository.cs",
               "RelativeDocumentMoniker": "ShoppingCart\\Implementations\\ProductRepository.cs",
@@ -215,7 +213,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 7,
               "Title": "IProductRepository.cs",
               "DocumentMoniker": "C:\\Projects\\Backend_devops\\ShoppingCartAPI\\ShoppingCart\\Repositories\\IProductRepository.cs",
               "RelativeDocumentMoniker": "ShoppingCart\\Repositories\\IProductRepository.cs",
@@ -227,7 +225,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 9,
               "Title": "Product.cs",
               "DocumentMoniker": "C:\\Projects\\Backend_devops\\ShoppingCartAPI\\ShoppingCart\\DataModel\\Product.cs",
               "RelativeDocumentMoniker": "ShoppingCart\\DataModel\\Product.cs",
@@ -239,15 +237,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Projects\\Backend_devops\\ShoppingCartAPI\\ShoppingCart\\Program.cs",
               "RelativeDocumentMoniker": "ShoppingCart\\Program.cs",
               "ToolTip": "C:\\Projects\\Backend_devops\\ShoppingCartAPI\\ShoppingCart\\Program.cs",
               "RelativeToolTip": "ShoppingCart\\Program.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAA+wDAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABUAAAAAAAAAAAAxwDoAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-01T09:32:50.733Z"
+              "WhenOpened": "2025-10-01T09:32:50.733Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -263,16 +262,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 11,
               "Title": "WeatherForecastController.cs",
               "DocumentMoniker": "C:\\Projects\\Backend_devops\\ShoppingCartAPI\\ShoppingCart\\Controllers\\WeatherForecastController.cs",
               "RelativeDocumentMoniker": "ShoppingCart\\Controllers\\WeatherForecastController.cs",
               "ToolTip": "C:\\Projects\\Backend_devops\\ShoppingCartAPI\\ShoppingCart\\Controllers\\WeatherForecastController.cs",
               "RelativeToolTip": "ShoppingCart\\Controllers\\WeatherForecastController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAgAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABoAAAA7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-01T09:17:40.147Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-01T09:17:40.147Z"
             }
           ]
         }

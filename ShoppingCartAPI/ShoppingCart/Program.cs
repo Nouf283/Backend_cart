@@ -17,22 +17,33 @@ builder.Services.AddTransient<SqlConnection>(_ =>
 
 builder.Services.AddScoped<IProductRepository, ProductRepository>();
 
+//builder.Services.AddCors(options =>
+//{
+//    //options.AddPolicy("AllowAngularApp", policy =>
+//    //{
+//    //    policy.WithOrigins("http://localhost:4200")
+//    //          .AllowAnyHeader()
+//    //          .AllowAnyMethod().
+//    //          AllowCredentials();
+//    //});
+
+//    options.AddPolicy("AllowAll", policy =>
+//    {
+//        policy.AllowAnyOrigin()
+//              .AllowAnyHeader()
+//              .AllowAnyMethod();
+//    });
+//});
+
 builder.Services.AddCors(options =>
 {
-    //options.AddPolicy("AllowAngularApp", policy =>
-    //{
-    //    policy.WithOrigins("http://localhost:4200")
-    //          .AllowAnyHeader()
-    //          .AllowAnyMethod().
-    //          AllowCredentials();
-    //});
-
-    options.AddPolicy("AllowAll", policy =>
-    {
-        policy.AllowAnyOrigin()
-              .AllowAnyHeader()
-              .AllowAnyMethod();
-    });
+    options.AddPolicy("AllowFrontend",
+        policy =>
+        {
+            policy.WithOrigins("http://frontend-cart-alb-289499419.ap-southeast-1.elb.amazonaws.com")
+                  .AllowAnyHeader()
+                  .AllowAnyMethod();
+        });
 });
 var app = builder.Build();
 
@@ -46,7 +57,7 @@ if (app.Environment.IsDevelopment())
 
 
 //app.UseHttpsRedirection();
-app.UseCors("AllowAll");
+app.UseCors("AllowFrontend");
 
 app.UseAuthorization();
 
