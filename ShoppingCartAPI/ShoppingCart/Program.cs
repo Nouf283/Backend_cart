@@ -19,12 +19,19 @@ builder.Services.AddScoped<IProductRepository, ProductRepository>();
 
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy("AllowAngularApp", policy =>
+    //options.AddPolicy("AllowAngularApp", policy =>
+    //{
+    //    policy.WithOrigins("http://localhost:4200")
+    //          .AllowAnyHeader()
+    //          .AllowAnyMethod().
+    //          AllowCredentials();
+    //});
+
+    options.AddPolicy("AllowAll", policy =>
     {
-        policy.WithOrigins("http://localhost:4200")
+        policy.AllowAnyOrigin()
               .AllowAnyHeader()
-              .AllowAnyMethod().
-              AllowCredentials();
+              .AllowAnyMethod();
     });
 });
 var app = builder.Build();
@@ -39,7 +46,7 @@ if (app.Environment.IsDevelopment())
 
 
 //app.UseHttpsRedirection();
-app.UseCors("AllowAngularApp");
+app.UseCors("AllowAll");
 
 app.UseAuthorization();
 

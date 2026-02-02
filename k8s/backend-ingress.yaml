@@ -1,0 +1,28 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: backend-ingress
+  namespace: backend
+  annotations:
+    kubernetes.io/ingress.class: 'alb'
+    alb.ingress.kubernetes.io/scheme: 'internet-facing'
+    alb.ingress.kubernetes.io/target-type: 'instance'
+    alb.ingress.kubernetes.io/listen-ports: '[{"HTTP":"80"}]'
+    alb.ingress.kubernetes.io/subnets: 'subnet-00b6050ff6c725bec,subnet-09a3d405c89682263'
+    alb.ingress.kubernetes.io/load-balancer-name: 'backend-cart-alb'
+    alb.ingress.kubernetes.io/tags: 'app=backend-cart,env=dev'
+    alb.ingress.kubernetes.io/healthcheck-path: '/WeatherForecast'
+    alb.ingress.kubernetes.io/healthcheck-port: '8080'
+    alb.ingress.kubernetes.io/healthcheck-protocol: 'HTTP'
+spec:
+  ingressClassName: 'alb'
+  rules:
+    - http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: 'backend-service'
+                port:
+                  number: 80
