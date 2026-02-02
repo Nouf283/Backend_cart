@@ -1,19 +1,19 @@
-# name: Build & Deploy .NET Backend Docker
+# name: Build & Deploy .NET Backend (No Docker)
 
-# # Trigger the workflow when code is pushed to main final
+# # Trigger the workflow when code is
 # on:
 #   push:
 #     branches:
 #       - master
 
 # jobs:
-#   build-and-push:
+#   build-and-deploy:
 #     runs-on: ubuntu-latest
 
 #     steps:
 #       # 1️⃣ Checkout code
 #       - name: Checkout repository
-#         uses: actions/checkout@v3
+#         uses: actions/checkout@v4
 
 #       # 2️⃣ Setup .NET SDK
 #       - name: Setup .NET
@@ -23,66 +23,74 @@
 
 #       # 3️⃣ Restore dependencies
 #       - name: Restore dependencies
+#         working-directory: ShoppingCartAPI/ShoppingCart
 #         run: dotnet restore
-#         working-directory: ShoppingCartAPI/ShoppingCart
 
-#       # 4️⃣ Build and publish
+#       # 4️⃣ Build and publish the app
 #       - name: Build and publish
-#         run: dotnet publish -c Release -o out
 #         working-directory: ShoppingCartAPI/ShoppingCart
+#         run: dotnet publish -c Release -o ./publish
 
-#       # 5️⃣ Login to Docker Hub
+#       # 5️⃣ Optional: Push Docker image to Docker Hub for backup
 #       - name: Docker login
 #         uses: docker/login-action@v2
 #         with:
 #           username: ${{ secrets.DOCKERHUB_USERNAME }}
 #           password: ${{ secrets.DOCKERHUB_PASSWORD }}
 
-#       # 6️⃣ Build Docker image
-#       - name: Build Docker image
+#       - name: Build Docker image (optional)
 #         run: docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/dotnet-backend:latest .
 #         working-directory: ShoppingCartAPI/ShoppingCart
 
-#       # 7️⃣ Push Docker image to Docker Hub
-#       - name: Push Docker image
+#       - name: Push Docker image (optional)
 #         run: docker push ${{ secrets.DOCKERHUB_USERNAME }}/dotnet-backend:latest
 
-#   deploy-to-ec2:
-#     runs-on: ubuntu-latest
-#     needs: build-and-push
-
-#     steps:
-#       - name: Deploy to backend EC2 via Bastion
-#         uses: appleboy/ssh-action@v0.1.9
+#       # 6️⃣ Copy published files to EC2 directly
+#       - name: Copy publish to EC2 via Bastion
+#         uses: appleboy/scp-action@v0.1.7
 #         with:
-#           host: ${{ secrets.EC2_PRIVATE_IP }} # Backend EC2 PRIVATE IP
+#           host: ${{ secrets.EC2_PRIVATE_IP }}
 #           username: ubuntu
 #           key: ${{ secrets.EC2_SSH_KEY }}
-#           port: 22
+#           source: 'ShoppingCartAPI/ShoppingCart/publish/*'
+#           target: '/var/www/backend'
+#           strip_components: 0
 
-#           # Bastion (Jump Host)
 #           proxy_host: ${{ secrets.EC2_BASTION_HOST }}
 #           proxy_username: ubuntu
 #           proxy_key: ${{ secrets.EC2_SSH_KEY }}
-#           proxy_port: 22
+
+#       # 7️⃣ Restart backend systemd service
+#       - name: Restart backend service
+#         uses: appleboy/ssh-action@v0.1.9
+#         with:
+#           host: ${{ secrets.EC2_PRIVATE_IP }}
+#           username: ubuntu
+#           key: ${{ secrets.EC2_SSH_KEY }}
+
+#           proxy_host: ${{ secrets.EC2_BASTION_HOST }}
+#           proxy_username: ubuntu
+#           proxy_key: ${{ secrets.EC2_SSH_KEY }}
 
 #           script: |
-#             docker pull ${{ secrets.DOCKERHUB_USERNAME }}/dotnet-backend:latest
+#             sudo chown -R ubuntu:ubuntu /var/www/backend
+#             sudo systemctl restart dotnet-backend
+#       # 8️⃣ Deploy backend to Kubernetes
+#       - name: Deploy backend to Kubernetes
+#         uses: appleboy/ssh-action@v0.1.9
+#         with:
+#           host: ${{ secrets.EC2_BASTION_HOST }}
+#           username: ubuntu
+#           key: ${{ secrets.EC2_SSH_KEY }}
+#           script: |
+#             cd /home/ubuntu/Backend_cart
+#             git pull
+#             export KUBECONFIG=/home/ubuntu/kubeconfig
+#             kubectl apply -f k8s/backend-deployment.yaml
+#             kubectl apply -f k8s/backend-service.yaml
 
-#             docker stop dotnet-backend || true
-#             docker rm dotnet-backend || true
+name: Build & Deploy Backend_cart to Kubernetes
 
-#             docker run -d --name dotnet-backend \
-#               -e DB_HOST=${{ secrets.DB_HOST }} \
-#               -e DB_NAME=${{ secrets.DB_NAME }} \
-#               -e DB_USER=${{ secrets.DB_USER }} \
-#               -e DB_PASSWORD=${{ secrets.DB_PASSWORD }} \
-#               -p 5000:80 \
-#               ${{ secrets.DOCKERHUB_USERNAME }}/dotnet-backend:latest
-
-name: Build & Deploy .NET Backend (No Docker)
-
-# Trigger the workflow when code is
 on:
   push:
     branches:
@@ -93,80 +101,75 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # 1️⃣ Checkout code
+      # 1️⃣ Checkout the repo
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      # 2️⃣ Setup .NET SDK
-      - name: Setup .NET
-        uses: actions/setup-dotnet@v3
-        with:
-          dotnet-version: '8.0.x'
+      # 2️⃣ Setup Docker Buildx
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
 
-      # 3️⃣ Restore dependencies
-      - name: Restore dependencies
-        working-directory: ShoppingCartAPI/ShoppingCart
-        run: dotnet restore
-
-      # 4️⃣ Build and publish the app
-      - name: Build and publish
-        working-directory: ShoppingCartAPI/ShoppingCart
-        run: dotnet publish -c Release -o ./publish
-
-      # 5️⃣ Optional: Push Docker image to Docker Hub for backup
+      # 3️⃣ Docker login
       - name: Docker login
-        uses: docker/login-action@v2
+        uses: docker/login-action@v3
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_PASSWORD }}
 
-      - name: Build Docker image (optional)
-        run: docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/dotnet-backend:latest .
-        working-directory: ShoppingCartAPI/ShoppingCart
+      # 4️⃣ Build Docker image
+      - name: Build Docker image
+        run: |
+          docker build \
+            -f ShoppingCartAPI/ShoppingCart/Dockerfile \
+            -t ${{ secrets.DOCKERHUB_USERNAME }}/backend-cart:latest \
+            -t ${{ secrets.DOCKERHUB_USERNAME }}/backend-cart:${{ github.sha }} \
+            ShoppingCartAPI/ShoppingCart
 
-      - name: Push Docker image (optional)
-        run: docker push ${{ secrets.DOCKERHUB_USERNAME }}/dotnet-backend:latest
+      # 5️⃣ Push Docker image
+      - name: Push Docker image
+        run: |
+          docker push ${{ secrets.DOCKERHUB_USERNAME }}/backend-cart:latest
+          docker push ${{ secrets.DOCKERHUB_USERNAME }}/backend-cart:${{ github.sha }}
 
-      # 6️⃣ Copy published files to EC2 directly
-      - name: Copy publish to EC2 via Bastion
-        uses: appleboy/scp-action@v0.1.7
-        with:
-          host: ${{ secrets.EC2_PRIVATE_IP }}
-          username: ubuntu
-          key: ${{ secrets.EC2_SSH_KEY }}
-          source: 'ShoppingCartAPI/ShoppingCart/publish/*'
-          target: '/var/www/backend'
-          strip_components: 0
-
-          proxy_host: ${{ secrets.EC2_BASTION_HOST }}
-          proxy_username: ubuntu
-          proxy_key: ${{ secrets.EC2_SSH_KEY }}
-
-      # 7️⃣ Restart backend systemd service
-      - name: Restart backend service
-        uses: appleboy/ssh-action@v0.1.9
-        with:
-          host: ${{ secrets.EC2_PRIVATE_IP }}
-          username: ubuntu
-          key: ${{ secrets.EC2_SSH_KEY }}
-
-          proxy_host: ${{ secrets.EC2_BASTION_HOST }}
-          proxy_username: ubuntu
-          proxy_key: ${{ secrets.EC2_SSH_KEY }}
-
-          script: |
-            sudo chown -R ubuntu:ubuntu /var/www/backend
-            sudo systemctl restart dotnet-backend
-      # 8️⃣ Deploy backend to Kubernetes
-      - name: Deploy backend to Kubernetes
+      # 6️⃣ Deploy to Kubernetes via Bastion Host
+      - name: Deploy Backend_cart to Kubernetes
         uses: appleboy/ssh-action@v0.1.9
         with:
           host: ${{ secrets.EC2_BASTION_HOST }}
           username: ubuntu
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
+            # Install kubectl if missing
+            if ! command -v kubectl >/dev/null 2>&1; then
+              curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
+              sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
+            fi
+
+            # Navigate to repo root
             cd /home/ubuntu/Backend_cart
-            git pull
-            export KUBECONFIG=/home/ubuntu/kubeconfig
-            kubectl apply -f k8s/backend-deployment.yaml
-            kubectl apply -f k8s/backend-service.yaml
+
+            git reset --hard
+            git clean -fd
+            git pull origin master
+
+            # Set kubeconfig for cluster access
+            export KUBECONFIG=/home/ubuntu/.kube/config
+
+            # Ensure namespace exists
+            kubectl create namespace backend --dry-run=client -o yaml | kubectl apply -f -
+
+            # Apply Kubernetes manifests
+            kubectl apply -f k8s/backend-deployment.yaml -n backend
+            kubectl apply -f k8s/backend-service.yaml -n backend
+
+            # Update deployment image to the latest SHA
+            kubectl set image deployment/backend-deployment \
+              dotnet-backend=${{ secrets.DOCKERHUB_USERNAME }}/backend-cart:${{ github.sha }} \
+              -n backend
+
+            # Wait for rollout to complete
+            kubectl rollout status deployment/backend-deployment -n backend
+
+            # Show pods and service status
+            kubectl get pods -n backend
+            kubectl get svc -n backend
