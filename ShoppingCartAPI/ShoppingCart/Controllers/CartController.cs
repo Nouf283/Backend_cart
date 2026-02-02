@@ -23,7 +23,7 @@ namespace ShoppingCart.Controllers
                 return Ok("Cart items added succesfully.");
             return BadRequest("Failed to add product.");
         }
-
+        //delete
         //[HttpDelete("{id}")]
         //public async Task<IActionResult> DeleteProduct(int id)
         //{
